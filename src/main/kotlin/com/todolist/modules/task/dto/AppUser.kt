@@ -1,44 +1,54 @@
-package com.example.todolistproject.user
+package com.todolist.modules.task.dto
 
-import com.example.todolistproject.modules.exceptions.AppException
+import com.todolist.modules.exceptions.AppException
 
 data class AppUser
     (
-    var id: Int = 0,
-    var name: String = "",
-    var email: String = "",
-    var password: String = ""
+    var id: Long?,
+    var name: String?,
+    var email: String?,
+    var password: String?,
 ) {
     fun validate() {
-        validateId()
-        validateName()
-        validateEmail()
-        validatePassword()
+        try {
+
+            validateId()
+            validateName()
+            validateEmail()
+            validatePassword()
+
+        } catch (e: AppException.Companion.DefinedException) {
+            throw e
+        } catch (e: Exception) {
+            AppException.UNDEFINED_EXCEPTION.throwException()
+        }
     }
+
     private fun validatePassword() {
-        if (password.length < 3) {
+        if (password!!.length < 3) {
             AppException.PASSWORD_FORMAT_EXCEPTION.throwException()
         }
     }
 
     private fun validateId() {
-        if (id < 0) {
+        if (id!! < 0) {
             AppException.USER_ID_LOWER_THAN_ZERO.throwException()
         }
     }
 
     private fun validateName() {
-        if (name.length < 3) {
+        if (name!!.length < 3) {
             AppException.NAME_FORMAT_EXCEPTION.throwException()
         }
     }
+
     private fun validateEmail() {
         var validationResult: Boolean = true
 
-        if (!email.contains("@")) {
+        if (!email!!.contains("@")) {
             validationResult = false
         }
-        val emailParts = email.split("@")
+        val emailParts = email!!.split("@")
         if (emailParts[0].isEmpty()) {
             validationResult = false
         }

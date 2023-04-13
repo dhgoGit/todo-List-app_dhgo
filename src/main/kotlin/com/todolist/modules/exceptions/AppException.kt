@@ -1,5 +1,7 @@
-package com.example.todolistproject.modules.exceptions
+package com.todolist.modules.exceptions
 enum class AppException(private val code:Int){
+
+    UNDEFINED_EXCEPTION(777),
 
     CREATED_DATE_FURTHER_THAN_DEADLINE(1001),
 
@@ -22,9 +24,12 @@ enum class AppException(private val code:Int){
 
 
     fun throwException() {
-        throw Exception("$code")
+        throw DefinedException(code)
     }
 
+    companion object{
+        class DefinedException(val code:Int):Exception()
+    }
 
 }
 

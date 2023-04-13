@@ -1,7 +1,7 @@
-package com.example.todolistproject.modules.task.repo
+package com.todolist.modules.task.repo
 
-import com.example.todolistproject.modules.task.dto.Task
-import com.example.todolistproject.user.AppUser
+import com.todolist.modules.task.dto.Task
+import com.todolist.modules.task.dto.AppUser
 import java.util.*
 
 interface TaskRepository {

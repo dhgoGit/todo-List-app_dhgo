@@ -1,12 +1,22 @@
-package com.example.todolistproject.modules.task.repo
+package com.todolist.modules.task.repo
 
-import com.example.todolistproject.modules.task.dto.Task
-import com.example.todolistproject.user.AppUser
+import com.todolist.modules.task.dto.Task
+import com.todolist.modules.task.dto.AppUser
+import jakarta.persistence.EntityManager
+import org.slf4j.Logger
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Repository
 import java.util.*
 
-class TaskRepositoryImpl:TaskRepository {
+@Repository
+class TaskRepositoryImpl: TaskRepository {
+    val logger: Logger = org.slf4j.LoggerFactory.getLogger(TaskRepository::class.java)
+
+    @Autowired
+    var em:EntityManager?=null
     override fun save(task: Task): Task {
-        TODO("Not yet implemented")
+        logger.info("hello new task!")
+        TODO()
     }
 
     override fun delete(task: Task) {
