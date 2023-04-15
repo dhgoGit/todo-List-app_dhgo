@@ -14,9 +14,9 @@ class TaskRepositoryImpl: TaskRepository {
 
     @Autowired
     var em:EntityManager?=null
-    override fun save(task: Task): Task {
+    override fun save(task: Task){
         logger.info("hello new task!")
-        TODO()
+        em?.persist(task.toEntiy())
     }
 
     override fun delete(task: Task) {

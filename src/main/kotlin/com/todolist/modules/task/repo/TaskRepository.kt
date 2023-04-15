@@ -4,8 +4,9 @@ import com.todolist.modules.task.dto.Task
 import com.todolist.modules.task.dto.AppUser
 import java.util.*
 
+
 interface TaskRepository {
-    fun save(task: Task): Task
+    fun save(task: Task)
     fun delete(task: Task)
     fun deleteAll()
     fun findAll(): List<Task>

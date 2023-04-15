@@ -1,20 +1,28 @@
 package com.todolist.modules.task.entity
 
 import com.todolist.modules.task.dto.AppUser
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
+import jakarta.persistence.*
+import lombok.Getter
+import lombok.Setter
 
 @Entity
+@Setter
+@Getter
+@Table(name="user")
 class AppUserEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="user_id") //현재는 index 대체
     var id: Long?=null
+    @Column(name="user_name")
     var username: String?=null
+    @Column(name="pw")
     var password: String?=null
+    @Column(name="email")
     var email: String?=null
 
     fun toDto(): AppUser {
         return AppUser(
-            id = id,
             name = username,
             password = password,
             email = email,

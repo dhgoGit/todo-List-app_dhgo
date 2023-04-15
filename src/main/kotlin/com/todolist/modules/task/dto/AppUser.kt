@@ -1,18 +1,17 @@
 package com.todolist.modules.task.dto
 
 import com.todolist.modules.exceptions.AppException
+import com.todolist.modules.task.entity.AppUserEntity
+
 
 data class AppUser
     (
-    var id: Long?,
-    var name: String?,
-    var email: String?,
-    var password: String?,
+    var name: String?=null,
+    var email: String?=null,
+    var password: String?=null,
 ) {
     fun validate() {
         try {
-
-            validateId()
             validateName()
             validateEmail()
             validatePassword()
@@ -29,13 +28,6 @@ data class AppUser
             AppException.PASSWORD_FORMAT_EXCEPTION.throwException()
         }
     }
-
-    private fun validateId() {
-        if (id!! < 0) {
-            AppException.USER_ID_LOWER_THAN_ZERO.throwException()
-        }
-    }
-
     private fun validateName() {
         if (name!!.length < 3) {
             AppException.NAME_FORMAT_EXCEPTION.throwException()
@@ -73,5 +65,13 @@ data class AppUser
             AppException.EMAIL_FORMAT_EXCEPTION.throwException()
         }
 
+    }
+    fun toEntity(): AppUserEntity {
+        val dto = this
+        return AppUserEntity().apply{
+            this.username = dto.name
+            this.email = dto.email
+            this.password = dto.password
+        }
     }
 }
