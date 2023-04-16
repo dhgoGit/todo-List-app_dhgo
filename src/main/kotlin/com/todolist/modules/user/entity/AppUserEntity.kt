@@ -1,6 +1,6 @@
-package com.todolist.modules.task.entity
+package com.todolist.modules.user.entity
 
-import com.todolist.modules.task.dto.AppUser
+import com.todolist.modules.user.dto.AppUser
 import jakarta.persistence.*
 import lombok.Getter
 import lombok.Setter
