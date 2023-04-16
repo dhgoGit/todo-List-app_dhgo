@@ -1,6 +1,6 @@
-package com.todolist.modules.task.repo
+package com.todolist.modules.user.repo
 
-import com.todolist.modules.task.dto.AppUser
+import com.todolist.modules.user.dto.AppUser
 import jakarta.persistence.EntityManager
 import org.slf4j.Logger
 import org.springframework.beans.factory.annotation.Autowired

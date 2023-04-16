@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
     <persistence-unit name="todo_list">
-        <class>com.todolist.modules.task.entity.AppUserEntity</class>
+        <class>com.todolist.modules.user.entity.AppUserEntity</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3312/todo_list_db" />

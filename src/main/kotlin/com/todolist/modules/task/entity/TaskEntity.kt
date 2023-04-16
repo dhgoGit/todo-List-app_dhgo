@@ -1,6 +1,7 @@
 package com.todolist.modules.task.entity
 
 import com.todolist.modules.task.dto.Task
+import com.todolist.modules.user.entity.AppUserEntity
 import jakarta.persistence.Id
 import jakarta.persistence.JoinColumn
 import jakarta.persistence.ManyToOne

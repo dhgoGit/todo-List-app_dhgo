@@ -1,12 +1,10 @@
-package com.todolist.modules.task.repo
+package com.todolist.modules.user.repo
 
-import com.todolist.modules.task.dto.AppUser
-import com.todolist.modules.task.dto.Task
-import java.util.*
+import com.todolist.modules.user.dto.AppUser
 
 interface AppUserRepository {
-    fun save(user:AppUser)
-    fun delete(user:AppUser)
+    fun save(user: AppUser)
+    fun delete(user: AppUser)
     fun deleteAll()
     fun findAll(): List<AppUser>
     fun findById(id: Long): AppUser?
