@@ -3,6 +3,7 @@ package com.todolist.modules.task.dto
 import com.todolist.modules.exceptions.AppException
 import com.todolist.modules.task.entity.DeadLineTaskEntity
 import com.todolist.modules.task.entity.TaskEntity
+import com.todolist.modules.user.dto.AppUser
 import java.util.*
 
 data class DeadLineTask

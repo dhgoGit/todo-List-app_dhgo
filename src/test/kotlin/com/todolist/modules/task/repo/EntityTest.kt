@@ -1,6 +1,6 @@
 package com.todolist.modules.task.repo
 
-import com.todolist.modules.task.dto.AppUser
+import com.todolist.modules.user.dto.AppUser
 import com.todolist.modules.task.dto.DeadLineTask
 
 import com.todolist.utils.LogUtil.Companion.log

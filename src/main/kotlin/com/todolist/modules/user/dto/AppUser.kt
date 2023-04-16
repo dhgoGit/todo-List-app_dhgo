@@ -1,7 +1,7 @@
-package com.todolist.modules.task.dto
+package com.todolist.modules.user.dto
 
 import com.todolist.modules.exceptions.AppException
-import com.todolist.modules.task.entity.AppUserEntity
+import com.todolist.modules.user.entity.AppUserEntity
 
 
 data class AppUser
