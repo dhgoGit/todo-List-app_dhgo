@@ -1,7 +1,7 @@
-package com.todolist.modules.config
+package com.todolist.apiperf.config
 
-import com.todolist.modules.apimeasure.ApiLogManager
-import com.todolist.modules.interceptor.ApiLogInterceptor
+import com.todolist.apiperf.logmanager.ApiLogManager
+import com.todolist.apiperf.interceptor.ApiLogInterceptor
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
 import org.springframework.context.annotation.Bean
