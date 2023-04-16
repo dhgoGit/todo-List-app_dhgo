@@ -1,6 +1,6 @@
-package com.todolist.modules.apimeasure
+package com.todolist.apiperf.logmanager
 
-import com.todolist.modules.interceptor.ApiLogInterceptor
+import com.todolist.apiperf.interceptor.ApiLogInterceptor
 import com.todolist.utils.LogUtil
 import com.todolist.utils.LogUtil.Companion.KotlinLogger
 import jakarta.servlet.http.HttpServletRequest
