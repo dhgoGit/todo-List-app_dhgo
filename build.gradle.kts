@@ -3,10 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.6.3"
 	id("io.spring.dependency-management") version "1.1.0"
-	kotlin("jvm") version "1.8.10"
-	kotlin("plugin.spring") version "1.8.10"
-	kotlin("plugin.jpa") version "1.8.10"
-
+	kotlin("jvm") version "1.5.0"
 }
 
 group = "com.example"
@@ -47,7 +44,8 @@ dependencies {
 	testImplementation("io.kotest:kotest-runner-junit5-jvm:5.5.5")
 	testImplementation("io.kotest:kotest-assertions-core-jvm:5.5.5")
 	testImplementation("io.kotest:kotest-property-jvm:5.5.5")
-	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2")
 
 
 	implementation("org.springframework.boot:spring-boot-starter-log4j2")

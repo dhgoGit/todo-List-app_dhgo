@@ -1,12 +1,12 @@
 package com.todolist.modules.task.repo
 
-import com.todolist.modules.user.dto.AppUser
 import com.todolist.modules.task.dto.DeadLineTask
-
+import com.todolist.modules.user.dto.AppUser
 import com.todolist.utils.LogUtil.Companion.log
 import io.kotest.core.spec.style.FeatureSpec
 import javax.persistence.EntityManager
 import javax.persistence.Persistence
+
 
 class EntityTest : FeatureSpec() {
     init {
