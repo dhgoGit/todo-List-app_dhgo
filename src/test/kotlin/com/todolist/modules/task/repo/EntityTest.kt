@@ -5,8 +5,8 @@ import com.todolist.modules.task.dto.DeadLineTask
 
 import com.todolist.utils.LogUtil.Companion.log
 import io.kotest.core.spec.style.FeatureSpec
-import jakarta.persistence.EntityManager
-import jakarta.persistence.Persistence
+import javax.persistence.EntityManager
+import javax.persistence.Persistence
 
 class EntityTest : FeatureSpec() {
     init {

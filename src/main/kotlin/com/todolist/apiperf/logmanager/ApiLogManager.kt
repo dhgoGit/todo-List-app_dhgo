@@ -3,8 +3,8 @@ package com.todolist.apiperf.logmanager
 import com.todolist.apiperf.interceptor.ApiLogInterceptor
 import com.todolist.utils.LogUtil
 import com.todolist.utils.LogUtil.Companion.KotlinLogger
-import jakarta.servlet.http.HttpServletRequest
-import jakarta.servlet.http.HttpServletResponse
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
 import org.springframework.web.util.ContentCachingResponseWrapper
 
 class ApiLogManager(

@@ -1,9 +1,12 @@
 package com.todolist.modules.user.entity
 
 import com.todolist.modules.user.dto.AppUser
-import jakarta.persistence.*
+import javax.persistence.*
 import lombok.Getter
 import lombok.Setter
+import org.hibernate.annotations.Entity
+import javax.persistence.GenerationType
+import javax.persistence.Table
 
 @Entity
 @Setter

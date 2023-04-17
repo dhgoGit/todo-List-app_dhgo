@@ -2,7 +2,7 @@ package com.todolist.modules.task.entity
 
 import com.todolist.modules.task.dto.DeadLineTask
 import com.todolist.modules.task.dto.Task
-import jakarta.persistence.*
+import javax.persistence.*
 import java.util.*
 
 @Entity
