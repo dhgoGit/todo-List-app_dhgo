@@ -6,7 +6,9 @@ import javax.persistence.*
 import java.util.*
 
 @Entity
+@Table(name="dead_line_task")
 class DeadLineTaskEntity : TaskEntity() {
+    @Temporal(TemporalType.TIMESTAMP)
     var deadLine: Date? = null
     override fun toDto(): Task = run {
         val entity = this

@@ -14,7 +14,8 @@ import java.util.*
 @MappedSuperclass
 @Table(name="task")
 abstract class TaskEntity{
-    @Id var id:Long?=null
+    @Id
+    open var id:Long?=null
     var title:String?=null
     var memo:String?=null
     var createdDate: Date?=null
