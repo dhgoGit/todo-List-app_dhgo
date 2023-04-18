@@ -1,14 +1,16 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "2.6.3"
+	id("org.springframework.boot") version "2.4.10"
 	id("io.spring.dependency-management") version "1.1.0"
-	kotlin("jvm") version "1.5.0"
+	kotlin("jvm") version "1.6.10"
+	kotlin("plugin.spring") version "1.6.10"
+	kotlin("plugin.jpa") version "1.6.10"
 }
 
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_18
+java.sourceCompatibility = JavaVersion.VERSION_15
 
 configurations {
 	all{
@@ -41,11 +43,12 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 
-	testImplementation("io.kotest:kotest-runner-junit5-jvm:5.5.5")
-	testImplementation("io.kotest:kotest-assertions-core-jvm:5.5.5")
-	testImplementation("io.kotest:kotest-property-jvm:5.5.5")
-	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
-	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2")
+	testImplementation("io.kotest:kotest-runner-junit5:4.6.1")
+	testImplementation("io.kotest:kotest-assertions-core-jvm:4.6.1")
+	testImplementation("io.kotest:kotest-property-jvm:4.6.1")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1")
+
 
 
 	implementation("org.springframework.boot:spring-boot-starter-log4j2")
@@ -56,8 +59,7 @@ dependencies {
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
-		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "18"
+		jvmTarget = "15"
 	}
 }
 

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 import org.springframework.web.util.ContentCachingResponseWrapper
 
-class ApiLogManager(
+open class ApiLogManager(
     private val request: HttpServletRequest?,
     response:HttpServletResponse?
 ) {
@@ -29,6 +29,7 @@ class ApiLogManager(
             """
                 |duration : ${startTime?.let { getTime().minus(it) }} ms 
                 |response size : ${cached?.contentSize}
+                |request : ${request?.requestURI}
                 |""".trimMargin()
         }
 
