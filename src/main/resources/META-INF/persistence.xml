@@ -3,7 +3,7 @@
     <persistence-unit name="todo_list">
         <class>com.todolist.modules.user.entity.AppUserEntity</class>
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://172.26.64.1:3312/todo_list_db" />
             <property name="javax.persistence.jdbc.user" value="dhgo" />
             <property name="javax.persistence.jdbc.password" value="admin1234!" />
