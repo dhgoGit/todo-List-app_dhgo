@@ -4,8 +4,8 @@
         <class>com.todolist.modules.user.entity.AppUserEntity</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3312/todo_list_db" />
-            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://172.26.64.1:3312/todo_list_db" />
+            <property name="javax.persistence.jdbc.user" value="dhgo" />
             <property name="javax.persistence.jdbc.password" value="admin1234!" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />
